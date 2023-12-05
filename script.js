@@ -1,12 +1,12 @@
 //your JS code here. If required.
-const browserInfo = document.getELementById('browser-info');
 
-function displayBrowserInfo(){
- const browesrName = navigator.appName;
-const browserVersion = navigator.appVersion;
+document.addEventListener("DOMContentLoaded", function() {
+  const browserInfoDiv = document.getElementById('browser-info');
 
-const infoMessage = document.createTextNode( "You are using " + browserName + " version " + browserVersionersion.);
-browserInfo.innerHTML = '';
-browserInfo.appendChild(infoMessage);
-}
-displayBrowserInfo();
+  const browserName = navigator.appName;
+  const browserVersion = navigator.appVersion;
+
+  const infoMessage = "You are using " + browserName + " version " + browserVersion;
+
+  browserInfoDiv.textContent = infoMessage;
+});
